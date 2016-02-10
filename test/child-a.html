@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HatcheryJS - I'm child A</title>
+    <script type="text/javascript" src="../src/hatchery.js"></script>
+    <script type="text/javascript">
+        (function() {
+            document.addEventListener('DOMContentLoaded', function() {
+                Hatchery.init({
+                    messages: {},
+                    url: '*'
+                });
+
+                Hatchery.send({
+                    type: 'init',
+                    sender: 'childA',
+                    reciever: 'parents'
+                });
+
+                Hatchery.send({
+                    type: 'initb',
+                    sender: 'childA',
+                    reciever: 'childB',
+                    params: {
+                        name: 'Tamm Kwun'
+                    }
+                });
+
+                return;
+            });
+        }());
+    </script>
+</head>
+<body>
+    I'm child A
+</body>
+</html>

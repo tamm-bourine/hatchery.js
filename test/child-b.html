@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HatcheryJS - I'm child B</title>
+    <script type="text/javascript" src="../src/hatchery.js"></script>
+    <script type="text/javascript">
+        (function() {
+            document.addEventListener('DOMContentLoaded', function() {
+                Hatchery.init({
+                    url: '*'
+                });
+
+                Hatchery.setTelepathy('childA', 'initb', function(sender, message) {
+                    console.log(message)
+                });
+
+                return;
+            });
+        }());
+    </script>
+</head>
+<body>
+    I'm child B
+</body>
+</html>
