@@ -1,3 +1,5 @@
+/** gulp tasks **/
+
 var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     gzip = require('gulp-gzip');
